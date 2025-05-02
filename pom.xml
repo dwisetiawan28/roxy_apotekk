@@ -9,7 +9,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>23</maven.compiler.release>
+        <maven.compiler.release>21</maven.compiler.release>
     </properties>
 
     <!-- Add Dependencies -->
@@ -28,4 +28,28 @@
             <version>3.2.0</version>
         </dependency>
     </dependencies>
+    
+    <build>
+  <!-- ... bagian plugin lainnya ... -->
+
+  <resources>
+    <!-- resource default (src/main/resources) -->
+    <resource>
+      <directory>src/main/resources</directory>
+      <includes>
+        <include>**/*</include>
+      </includes>
+    </resource>
+
+    <!-- tambahkan .env dari root project -->
+    <resource>
+      <directory>${project.basedir}</directory>
+      <includes>
+        <include>.env</include>
+      </includes>
+      <targetPath>.</targetPath>
+    </resource>
+  </resources>
+</build>
+
 </project>

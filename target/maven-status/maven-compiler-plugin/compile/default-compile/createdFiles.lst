@@ -1,2 +1,4 @@
 config\DatabaseConfig.class
 Main.class
+repository\usersRepo.class
+model\user.class
