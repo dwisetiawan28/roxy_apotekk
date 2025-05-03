@@ -3,4 +3,5 @@ ui\SignIn$2.class
 ui\SignUp.class
 repository\usersRepo.class
 model\user.class
+ui\Dashboard.class
 ui\SignIn$1.class

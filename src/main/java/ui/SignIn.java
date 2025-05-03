@@ -150,14 +150,12 @@ public class SignIn extends JFrame {
             JOptionPane.showMessageDialog(this,
                 "Login succes. Welcome, " + result.getUserName() + "!");
             // TODO: lanjut ke halaman utama
+            Dashboard dahsboard = new Dashboard(); 
+            dahsboard.setVisible(true);
+            dispose();
         } else {
             JOptionPane.showMessageDialog(this, "Email and password doesn't match!");
         }
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            new SignIn().setVisible(true);
-        });
-    }
 }
