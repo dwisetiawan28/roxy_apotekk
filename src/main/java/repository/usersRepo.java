@@ -16,6 +16,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.sql.ResultSet;
 
 public class usersRepo {
     public boolean registerUser(user users){
@@ -43,5 +44,35 @@ public class usersRepo {
                 System.err.println("❌ Error SQL: " + e.getMessage());
                 return false;
             }
+    }
+    
+    // repository/usersRepo.java
+    public user signIn(String email, String password) {
+        String sql = "SELECT * FROM users WHERE email = ? AND password = ?";
+    
+        try (Connection conn = DatabaseConfig.connect();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+        
+            stmt.setString(1, email);
+            stmt.setString(2, password);
+        
+            ResultSet rs = stmt.executeQuery();
+        
+            if (rs.next()) {
+                return new user(
+                    rs.getString("username"),
+                    rs.getString("email"),
+                    rs.getString("password"),
+                    rs.getString("phone_number"),
+                    rs.getTimestamp("created_at").toLocalDateTime(),
+                    rs.getInt("created_by"),
+                    rs.getTimestamp("updated_at").toLocalDateTime(),
+                    rs.getInt("updated_by")
+                );
+            }
+        } catch (SQLException e) {
+            System.err.println("Error SQL SignIn: " + e.getMessage());
+        }
+        return null;
     }
 }
