@@ -9,7 +9,9 @@ public class DatabaseConfig {
 
     public static Connection connect() {
         try {
-            Dotenv dotenv = Dotenv.load();
+            Dotenv dotenv = Dotenv.configure()
+            .directory("src/main/java")
+            .load();
 
             String dbHost = dotenv.get("DB_HOST");
             String dbPort = dotenv.get("DB_PORT");
