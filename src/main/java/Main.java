@@ -29,20 +29,18 @@ public class Main {
 
         System.out.print("Phone Number   : ");
         String phoneNumber = sc.nextLine();
-
-        System.out.print("Created By     : ");
-        String createdBy = sc.nextLine();
+        
+        int createdBy = 0;
         
         LocalDateTime now = LocalDateTime.now();
-        
         user user=new user(
             username,
             email,
             password,
             phoneNumber,
             now,
-            now,
             createdBy,
+            now,
             createdBy
         );
         

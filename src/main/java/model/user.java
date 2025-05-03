@@ -17,17 +17,17 @@ public class user {
     private String phoneNumber;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-    private String createdBy;
-    private String updatedBy;
+    private int createdBy;
+    private int updatedBy;
     
-    public user(String email, String password, String username, String phoneNumber, LocalDateTime createdAt, LocalDateTime updatedAt, String createdBy, String updatedBy){
+    public user(String username, String email, String password, String phoneNumber, LocalDateTime createdAt, int createdBy, LocalDateTime updatedAt, int updatedBy){
         this.email=email;
         this.password=password;
         this.username=username;
         this.phoneNumber=phoneNumber;
         this.createdAt=createdAt;
-        this.updatedAt=updatedAt;
         this.createdBy=createdBy;
+        this.updatedAt=updatedAt;
         this.updatedBy=updatedBy;
     }
     
@@ -46,13 +46,13 @@ public class user {
     public LocalDateTime getCreatedAt(){
         return createdAt;
     }
+    public int getCreatedBy(){
+        return createdBy;
+    }
     public LocalDateTime getUpdatedAt(){
         return updatedAt;
     }
-    public String getCreatedBy(){
-        return createdBy;
-    }
-    public String getUpdatedBy(){
+    public int getUpdatedBy(){
         return updatedBy;
     }
 }

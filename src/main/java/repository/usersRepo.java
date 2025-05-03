@@ -33,9 +33,9 @@ public class usersRepo {
                 stmt.setString(3, users.getPassword());
                 stmt.setString(4, users.getPhoneNumber());
                 stmt.setTimestamp(5, Timestamp.valueOf(users.getCreatedAt()));
-                stmt.setTimestamp(6, Timestamp.valueOf(users.getUpdatedAt()));
-                stmt.setString(7, users.getCreatedBy());
-                stmt.setString(8, users.getUpdatedBy());
+                stmt.setInt(6, users.getCreatedBy());
+                stmt.setTimestamp(7, Timestamp.valueOf(users.getUpdatedAt()));
+                stmt.setInt(8, users.getUpdatedBy());
                 
                 int rows = stmt.executeUpdate();
                 return rows>0;
