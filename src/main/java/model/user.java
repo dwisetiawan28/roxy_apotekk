@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 
 public class user {
     private String email;
-    private String password;
+    public String password;
     private String username;
     private String phoneNumber;
     private LocalDateTime createdAt;

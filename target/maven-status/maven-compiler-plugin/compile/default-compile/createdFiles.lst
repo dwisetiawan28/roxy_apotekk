@@ -1,4 +1,6 @@
+ui\SignUp.class
 config\DatabaseConfig.class
 Main.class
 repository\usersRepo.class
+ui\SignIn.class
 model\user.class
