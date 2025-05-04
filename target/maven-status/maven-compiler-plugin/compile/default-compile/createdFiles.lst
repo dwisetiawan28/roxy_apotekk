@@ -1,7 +1,9 @@
 config\DatabaseConfig.class
-ui\SignIn$2.class
-ui\SignUp.class
+Main.class
+ui\Login$2.class
 repository\usersRepo.class
+ui\Login$3.class
 model\user.class
+ui\Login$1.class
+ui\Login.class
 ui\Dashboard.class
-ui\SignIn$1.class
