@@ -41,7 +41,7 @@ public class usersRepo {
                 int rows = stmt.executeUpdate();
                 return rows>0;
             }catch (SQLException e) {
-                System.err.println("❌ Error SQL: " + e.getMessage());
+                System.err.println("Error SQL: " + e.getMessage());
                 return false;
             }
     }

@@ -1,9 +1,11 @@
 config\DatabaseConfig.class
-Main.class
 ui\Login$2.class
-repository\usersRepo.class
-ui\Login$3.class
+repository\supplierRepo.class
 model\user.class
 ui\Login$1.class
 ui\Login.class
+Main.class
+model\suppliers.class
+repository\usersRepo.class
+ui\Login$3.class
 ui\Dashboard.class
