@@ -15,7 +15,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.sql.ResultSet;
 
 public class supplierRepo {
     public boolean createSupplier(suppliers spl){

@@ -1,6 +1,6 @@
 import ui.Login;
-import repository.supplierRepo;
-import model.suppliers;
+import repository.brandsRepo;
+import model.brands;
 
 import javax.swing.JFrame;
 import java.util.Scanner;
@@ -21,65 +21,60 @@ public class Main {
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
         });
-
-    supplierRepo repo = new supplierRepo();
+        brandsRepo repo = new brandsRepo();
         Scanner scanner = new Scanner(System.in);
         int userId = 1;
 
         System.out.println("=== MENU ===");
-        System.out.println("1. Create Supplier");
-        System.out.println("2. Update Supplier");
-        System.out.println("3. Delete Supplier");
+        System.out.println("1. Create Brand");
+        System.out.println("2. Update Brand");
+        System.out.println("3. Delete Brand");
         System.out.print("Pilih opsi (1/2/3): ");
         int choice = scanner.nextInt();
         scanner.nextLine(); // flush newline
 
         switch (choice) {
             case 1 -> {
-                System.out.print("Nama Supplier: ");
-                String name = scanner.nextLine();
-                System.out.print("Alamat: ");
-                String address = scanner.nextLine();
-                System.out.print("No. Telepon: ");
-                String phone = scanner.nextLine();
+                System.out.print("Brand Name: ");
+                String brandName = scanner.nextLine();
+                System.out.print("Supplier Id: ");
+                int supplierId = scanner.nextInt();
 
-                suppliers newSupplier = new suppliers(
-                        name, address, phone,
+                brands newBrands = new brands(
+                        brandName,supplierId,
                         LocalDateTime.now(), userId,
                         LocalDateTime.now(), userId
                 );
-                boolean created = repo.createSupplier(newSupplier);
+                boolean created = repo.createBrands(newBrands);
                 System.out.println("CREATE: " + (created ? "Berhasil" : "Gagal"));
             }
 
             case 2 -> {
-                System.out.print("ID Supplier yang akan diubah: ");
+                System.out.print("ID Brand Name to be changed: ");
                 int id = scanner.nextInt(); scanner.nextLine();
-                System.out.print("Nama baru: ");
-                String name = scanner.nextLine();
-                System.out.print("Alamat baru: ");
-                String address = scanner.nextLine();
-                System.out.print("Telepon baru: ");
-                String phone = scanner.nextLine();
+                System.out.print("New Brand Name: ");
+                String brandName = scanner.nextLine();
+                System.out.print("New Supplier ID: ");
+                int supplierId = scanner.nextInt();
 
-                suppliers updateSupplier = new suppliers(
-                        name, address, phone,
+                brands updateBrand = new brands(
+                        brandName,supplierId,
                         null, 0, // createdAt/by tidak diubah
                         LocalDateTime.now(), userId
                 );
-                updateSupplier.setId(id);
+                updateBrand.setId(id);
 
-                boolean updated = repo.updateSupplier(updateSupplier);
+                boolean updated = repo.updateBrand(updateBrand);
                 System.out.println("UPDATE: " + (updated ? "Berhasil" : "Gagal"));
             }
 
             case 3 -> {
-                System.out.print("ID Supplier yang akan dihapus: ");
+                System.out.print("ID Brand Name to be deleted: ");
                 int id = scanner.nextInt(); scanner.nextLine();
-                suppliers delSupplier = new suppliers(null, null, null, null, 0, null, 0);
-                delSupplier.setId(id);
+                brands delBrand = new brands(null, 0, null, 0, null, 0);
+                delBrand.setId(id);
 
-                boolean deleted = repo.deleteSuplier(delSupplier);
+                boolean deleted = repo.deleteBrand(delBrand);
                 System.out.println("DELETE: " + (deleted ? "Berhasil" : "Gagal"));
             }
 

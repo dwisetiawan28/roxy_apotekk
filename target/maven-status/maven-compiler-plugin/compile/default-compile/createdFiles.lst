@@ -8,6 +8,8 @@ Main.class
 model\suppliers.class
 ui\Dashboard$1.class
 repository\usersRepo.class
+model\brands.class
 ui\Login$3.class
+repository\brandsRepo.class
 ui\Dashboard.class
 ui\SupplierManagementGUI.class

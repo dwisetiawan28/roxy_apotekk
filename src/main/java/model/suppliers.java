@@ -65,7 +65,7 @@ public class suppliers {
     public void setPhone(String phone){
         this.phone=phone;
     }
-     public void setCreatedAt(LocalDateTime createdAt) {
+    public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
       public void setCreatedBy(int createdBy) {
