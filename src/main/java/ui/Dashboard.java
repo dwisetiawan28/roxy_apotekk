@@ -8,6 +8,8 @@ import org.jfree.data.general.DefaultPieDataset;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Dashboard extends JFrame {
     public Dashboard(user currentUser) {
@@ -42,6 +44,22 @@ public class Dashboard extends JFrame {
             btn.setBackground(new Color(60, 63, 65));
             btn.setForeground(Color.WHITE);
             btn.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+            
+            // Menambahkan ActionListener untuk tombol
+            btn.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    if (menu.equals("Manajemen Supplier")) {
+                        // Aksi yang ingin dilakukan saat tombol "Manajemen Supplier" ditekan
+                        JOptionPane.showMessageDialog(panel, "Anda memilih Manajemen Supplier");
+                        SupplierManagementGUI dahsboard = new SupplierManagementGUI(); 
+                        dahsboard.setVisible(true);
+                    } else {
+                        // Aksi untuk tombol lainnya jika diperlukan
+                        System.out.println("Tombol " + menu + " ditekan");
+                    }
+                }
+            });
             panel.add(btn);
         }
 

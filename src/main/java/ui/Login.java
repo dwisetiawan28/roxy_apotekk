@@ -42,8 +42,6 @@ public class Login extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(51, 153, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\PROGRAMER\\Documents\\NetBeansProjects\\INVENTORY_ROXY\\src\\main\\java\\assets\\roxy.png")); // NOI18N
-
         jLabel2.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
         jLabel2.setText("   Inventory Apotek Roxy");
 
@@ -52,8 +50,6 @@ public class Login extends javax.swing.JPanel {
                 jTextField1ActionPerformed(evt);
             }
         });
-
-        jPasswordField1.setText("jPasswordField1");
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel3.setText("Email");

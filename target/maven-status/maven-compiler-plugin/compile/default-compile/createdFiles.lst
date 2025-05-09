@@ -6,6 +6,8 @@ ui\Login$1.class
 ui\Login.class
 Main.class
 model\suppliers.class
+ui\Dashboard$1.class
 repository\usersRepo.class
 ui\Login$3.class
 ui\Dashboard.class
+ui\SupplierManagementGUI.class
