@@ -2,6 +2,7 @@ config\DatabaseConfig.class
 ui\Login$2.class
 repository\supplierRepo.class
 model\user.class
+repository\itemsRepo.class
 ui\Login$1.class
 ui\Login.class
 Main.class
@@ -9,6 +10,7 @@ model\suppliers.class
 ui\Dashboard$1.class
 repository\usersRepo.class
 model\brands.class
+model\items.class
 ui\Login$3.class
 repository\brandsRepo.class
 ui\Dashboard.class
