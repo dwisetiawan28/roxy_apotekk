@@ -4,6 +4,7 @@ repository\supplierRepo.class
 model\user.class
 repository\itemsRepo.class
 ui\Login$1.class
+helper\currentUser.class
 ui\Login.class
 Main.class
 model\suppliers.class

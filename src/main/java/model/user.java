@@ -11,8 +11,9 @@ package model;
 import java.time.LocalDateTime;
 
 public class user {
+    private int id;
     private String email;
-    public String password;
+    private String password;
     private String username;
     private String phoneNumber;
     private LocalDateTime createdAt;
@@ -20,7 +21,8 @@ public class user {
     private int createdBy;
     private int updatedBy;
     
-    public user(String username, String email, String password, String phoneNumber, LocalDateTime createdAt, int createdBy, LocalDateTime updatedAt, int updatedBy){
+    public user(int id,String username, String email, String password, String phoneNumber, LocalDateTime createdAt, int createdBy, LocalDateTime updatedAt, int updatedBy){
+        this.id=id;
         this.email=email;
         this.password=password;
         this.username=username;
@@ -29,6 +31,9 @@ public class user {
         this.createdBy=createdBy;
         this.updatedAt=updatedAt;
         this.updatedBy=updatedBy;
+    }
+    public int getId() {
+        return id;
     }
     
     public String getEmail(){
