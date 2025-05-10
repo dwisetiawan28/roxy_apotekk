@@ -1,5 +1,6 @@
 C:\Users\PROGRAMER\Documents\NetBeansProjects\INVENTORY_ROXY\src\main\java\config\DatabaseConfig.java
 C:\Users\PROGRAMER\Documents\NetBeansProjects\INVENTORY_ROXY\src\main\java\helper\currentUser.java
+C:\Users\PROGRAMER\Documents\NetBeansProjects\INVENTORY_ROXY\src\main\java\helper\validasi.java
 C:\Users\PROGRAMER\Documents\NetBeansProjects\INVENTORY_ROXY\src\main\java\Main.java
 C:\Users\PROGRAMER\Documents\NetBeansProjects\INVENTORY_ROXY\src\main\java\model\brands.java
 C:\Users\PROGRAMER\Documents\NetBeansProjects\INVENTORY_ROXY\src\main\java\model\items.java
@@ -12,3 +13,4 @@ C:\Users\PROGRAMER\Documents\NetBeansProjects\INVENTORY_ROXY\src\main\java\repos
 C:\Users\PROGRAMER\Documents\NetBeansProjects\INVENTORY_ROXY\src\main\java\ui\Dashboard.java
 C:\Users\PROGRAMER\Documents\NetBeansProjects\INVENTORY_ROXY\src\main\java\ui\Login.java
 C:\Users\PROGRAMER\Documents\NetBeansProjects\INVENTORY_ROXY\src\main\java\ui\SupplierManagementGUI.java
+C:\Users\PROGRAMER\Documents\NetBeansProjects\INVENTORY_ROXY\src\main\java\usecase\userUc.java

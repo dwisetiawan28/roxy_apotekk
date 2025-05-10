@@ -60,4 +60,8 @@ public class user {
     public int getUpdatedBy(){
         return updatedBy;
     }
+    
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
